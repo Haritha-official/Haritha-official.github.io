@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Rivera | 3D Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader"></div>
+        <div class="loading-text">Initializing 3D Space</div>
+    </div>
+
+    <!-- 3D Canvas Container -->
+    <div id="canvas-container"></div>
+
+    <!-- UI Overlay -->
+    <div class="ui-overlay">
+        <!-- Navigation -->
+        <nav>
+            <a href="#" class="nav-link active" data-section="home">Home</a>
+            <a href="#" class="nav-link" data-section="about">About</a>
+            <a href="#" class="nav-link" data-section="projects">Projects</a>
+            <a href="#" class="nav-link" data-section="contact">Contact</a>
+        </nav>
+
+        <!-- Controls -->
+        <div class="controls">
+            <div class="control-btn" id="reset-camera" title="Reset View">
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="control-btn" id="auto-rotate" title="Auto Rotate">
+                <i class="fas fa-sync-alt"></i>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <h4>Navigation</h4>
+            <p>• Click & drag to rotate</p>
+            <p>• Scroll to zoom</p>
+            <p>• Click objects to explore</p>
+        </div>
+    </div>
+
+    <!-- Content Panels -->
+    <!-- Home Panel -->
+    <div class="content-panel" id="home-panel">
+        <div class="close-btn"><i class="fas fa-times"></i></div>
+        <h2 class="panel-title">Welcome to My 3D Portfolio</h2>
+        <div class="panel-content">
+            <p>Hello! I'm Haritha, a passionate Cybersecurity Student and Developer with a drive to explore vulnlerabilities, build security focused tools, and innovate with technologies. This portfolio is designed as an interactive 3D space where you can explore my work and skills in a unique environment.</p>
+            <p>Navigate through the 3D space by clicking and dragging to rotate the view, scrolling to zoom in and out, and clicking on the floating objects to discover different sections of my portfolio.</p>
+            <p>Each object in this space represents a different aspect of my work - from my background and skills to my projects and how to get in touch with me.</p>
+            <div class="skills">
+                <div class="skill">Cyber Security</div>
+                <div class="skill">Networking</div>
+                <div class="skill">Python</div>
+                <div class="skill">Frontend Development</div>
+                <div class="skill">Websecurity</div>
+                <div class="skill">Automation</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Panel -->
+    <div class="content-panel" id="about-panel">
+        <div class="close-btn"><i class="fas fa-times"></i></div>
+        <h2 class="panel-title">About Me</h2>
+        <div class="panel-content">
+            <p>I'm passionate about building security-focused tools and exploring innovative technologies.</p>
+            <p>With a strong foundation in networking, Python, and web security, I enjoy solving challenges and creating impactful solutions.</p>
+            <p>Driven by curiosity and creativity, I aim to contribute to a safer and smarter digital world.</p>
+            <div class="skills">
+                <div class="skill">HTML5</div>
+                <div class="skill">CSS3</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">Cyber Security</div>
+                <div class="skill">Linux</div>
+                <div class="skill">AWS</div>
+                <div class="skill">SQL</div>
+                <div class="skill">Git</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Panel -->
+    <div class="content-panel" id="projects-panel">
+        <div class="close-btn"><i class="fas fa-times"></i></div>
+        <h2 class="panel-title">My Projects</h2>
+        <div class="panel-content">
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3 class="project-title">Advanced Vulnerability Scanner</h3>
+                    <p class="project-desc">A powerful Python-based Web Vulnerability Scanner that helps to assess common web application security issues with business impact analysis and severity scoring.</p>
+                    <div class="project-tags">
+                        <span class="tag">SQL Injection</span>
+                        <span class="tag">XSS</span>
+                        <span class="tag">Weak Authentication</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Haritha-official/Advanced-Vulnerability-Scanner" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3 class="project-title">StegoScope-Stegnography Tool</h3>
+                    <p class="project-desc">It allows you to embed secret messages into images and extract them later using a simple graphical interface.</p>
+                    <div class="project-tags">
+                        <span class="tag">Tkinter</span>
+                        <span class="tag">Pillow</span>
+                        <span class="tag">Stegno</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Haritha-official/HideNReveal---Stegnography-GUI" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3 class="project-title">Parallex Startup Design</h3>
+                    <p class="project-desc">A sleek, modern, and visually appealing landing page designed with smooth parallax effects to captivate your audience.</p>
+                    <div class="project-tags">
+                        <span class="tag">UI/UX</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Haritha-official/Parallex-Startup-Design" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3 class="project-title">Port Scanner</h3>
+                    <p class="project-desc">This tool scans a target host for open ports, detects running services, attempts basic banner banner grabbing, and exports results to a CSV file for further analysis.</p>
+                    <div class="project-tags">
+                        <span class="tag">Multithreaded</span>
+                        <span class="tag">Banner Grabbing</span>
+                        <span class="tag">Open Ports</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Haritha-official/Port_Scanner" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Panel -->
+    <div class="content-panel" id="contact-panel">
+        <div class="close-btn"><i class="fas fa-times"></i></div>
+        <h2 class="panel-title">Get In Touch</h2>
+        <div class="panel-content">
+            <p>I'm always interested in new opportunities and exciting projects. If you'd like to work together feel free to reach out!</p>
+            
+            <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="e459c806-73f5-4304-852a-71be1742aec0">
+
+    <div class="form-group">
+        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="subject" placeholder="Subject">
+    </div>
+    <div class="form-group">
+        <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
+    </div>
+
+    <div class="form-result"></div>
+    <button type="submit" class="btn-submit">Send Message</button>
+</form>
+
+            
+            <div style="margin-top: 30px;">
+                <h3 style="font-family: 'Orbitron', sans-serif; margin-bottom: 15px; color: var(--primary);">Connect With Me</h3>
+                <div style="display: flex; gap: 15px;">
+                    <a href="https://github.com/Haritha-official" style="width: 50px; height: 50px; background: rgba(0, 255, 255, 0.1); border: 1px solid var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 20px; transition: all 0.3s ease;">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/haritha-ganapathy-5a7720269/" style="width: 50px; height: 50px; background: rgba(0, 255, 255, 0.1); border: 1px solid var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 20px; transition: all 0.3s ease;">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global variables
+        let scene, camera, renderer, controls;
+        let objects = [];
+        let raycaster, mouse;
+        let autoRotate = false;
+        let selectedObject = null;
+        
+        // Initialize Three.js scene
+        function init() {
+            // Create scene
+            scene = new THREE.Scene();
+            scene.fog = new THREE.Fog(0x0A0A1A, 10, 50);
+            
+            // Create camera
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 30;
+            
+            // Create renderer
+            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            document.getElementById('canvas-container').appendChild(renderer.domElement);
+            
+            // Add lights
+            const ambientLight = new THREE.AmbientLight(0x404040);
+            scene.add(ambientLight);
+            
+            const directionalLight = new THREE.DirectionalLight(0x00FFFF, 1);
+            directionalLight.position.set(1, 1, 1);
+            scene.add(directionalLight);
+            
+            const directionalLight2 = new THREE.DirectionalLight(0xFF00FF, 0.5);
+            directionalLight2.position.set(-1, -1, -1);
+            scene.add(directionalLight2);
+            
+            // Add stars background
+            createStarfield();
+            
+            // Create portfolio objects
+            createPortfolioObjects();
+            
+            // Add raycaster for mouse interaction
+            raycaster = new THREE.Raycaster();
+            mouse = new THREE.Vector2();
+            
+            // Add event listeners
+            window.addEventListener('resize', onWindowResize);
+            renderer.domElement.addEventListener('mousemove', onMouseMove);
+            renderer.domElement.addEventListener('click', onMouseClick);
+            
+            // Add controls
+            addControls();
+            
+            // Hide loading screen
+            setTimeout(() => {
+                document.getElementById('loading-screen').classList.add('hidden');
+            }, 1000);
+            
+            // Start animation
+            animate();
+        }
+        
+        // Create starfield background
+        function createStarfield() {
+            const starsGeometry = new THREE.BufferGeometry();
+            const starsMaterial = new THREE.PointsMaterial({
+                color: 0xFFFFFF,
+                size: 0.1,
+                transparent: true,
+                opacity: 0.8
+            });
+            
+            const starsVertices = [];
+            for (let i = 0; i < 10000; i++) {
+                const x = (Math.random() - 0.5) * 2000;
+                const y = (Math.random() - 0.5) * 2000;
+                const z = (Math.random() - 0.5) * 2000;
+                starsVertices.push(x, y, z);
+            }
+            
+            starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starsVertices, 3));
+            const starField = new THREE.Points(starsGeometry, starsMaterial);
+            scene.add(starField);
+        }
+        
+        // Create portfolio objects
+        function createPortfolioObjects() {
+            // Home object - Large central sphere
+            const homeGeometry = new THREE.SphereGeometry(3, 32, 32);
+            const homeMaterial = new THREE.MeshPhongMaterial({
+                color: 0x00FFFF,
+                emissive: 0x00FFFF,
+                emissiveIntensity: 0.2,
+                shininess: 100
+            });
+            const homeObject = new THREE.Mesh(homeGeometry, homeMaterial);
+            homeObject.position.set(0, 0, 0);
+            homeObject.userData = { section: 'home', originalColor: 0x00FFFF };
+            scene.add(homeObject);
+            objects.push(homeObject);
+            
+            // About object - Torus
+            const aboutGeometry = new THREE.TorusGeometry(2.5, 0.8, 16, 100);
+            const aboutMaterial = new THREE.MeshPhongMaterial({
+                color: 0xFF00FF,
+                emissive: 0xFF00FF,
+                emissiveIntensity: 0.2,
+                shininess: 100
+            });
+            const aboutObject = new THREE.Mesh(aboutGeometry, aboutMaterial);
+            aboutObject.position.set(-10, 5, -5);
+            aboutObject.userData = { section: 'about', originalColor: 0xFF00FF };
+            scene.add(aboutObject);
+            objects.push(aboutObject);
+            
+            // Projects object - Octahedron
+            const projectsGeometry = new THREE.OctahedronGeometry(3, 0);
+            const projectsMaterial = new THREE.MeshPhongMaterial({
+                color: 0xFFFF00,
+                emissive: 0xFFFF00,
+                emissiveIntensity: 0.2,
+                shininess: 100
+            });
+            const projectsObject = new THREE.Mesh(projectsGeometry, projectsMaterial);
+            projectsObject.position.set(10, -5, -5);
+            projectsObject.userData = { section: 'projects', originalColor: 0xFFFF00 };
+            scene.add(projectsObject);
+            objects.push(projectsObject);
+            
+            // Contact object - Tetrahedron
+            const contactGeometry = new THREE.TetrahedronGeometry(3, 0);
+            const contactMaterial = new THREE.MeshPhongMaterial({
+                color: 0x00FF00,
+                emissive: 0x00FF00,
+                emissiveIntensity: 0.2,
+                shininess: 100
+            });
+            const contactObject = new THREE.Mesh(contactGeometry, contactMaterial);
+            contactObject.position.set(0, -8, 5);
+            contactObject.userData = { section: 'contact', originalColor: 0x00FF00 };
+            scene.add(contactObject);
+            objects.push(contactObject);
+            
+            // Add connecting lines between objects
+            const lineMaterial = new THREE.LineBasicMaterial({ 
+                color: 0x404040,
+                transparent: true,
+                opacity: 0.5
+            });
+            
+            for (let i = 0; i < objects.length; i++) {
+                for (let j = i + 1; j < objects.length; j++) {
+                    const points = [];
+                    points.push(objects[i].position);
+                    points.push(objects[j].position);
+                    
+                    const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
+                    const line = new THREE.Line(lineGeometry, lineMaterial);
+                    scene.add(line);
+                }
+            }
+        }
+        
+        // Add controls
+        function addControls() {
+            // Simple orbit controls implementation
+            let isMouseDown = false;
+            let mouseX = 0, mouseY = 0;
+            let targetRotationX = 0, targetRotationY = 0;
+            let targetRotationOnMouseDownX = 0, targetRotationOnMouseDownY = 0;
+            
+            renderer.domElement.addEventListener('mousedown', (event) => {
+                isMouseDown = true;
+                mouseX = event.clientX;
+                mouseY = event.clientY;
+                targetRotationOnMouseDownX = targetRotationX;
+                targetRotationOnMouseDownY = targetRotationY;
+            });
+            
+            renderer.domElement.addEventListener('mousemove', (event) => {
+                if (isMouseDown) {
+                    mouseX = event.clientX;
+                    mouseY = event.clientY;
+                    targetRotationY = targetRotationOnMouseDownY + (mouseX - window.innerWidth / 2) * 0.01;
+                    targetRotationX = targetRotationOnMouseDownY + (mouseY - window.innerHeight / 2) * 0.01;
+                }
+            });
+            
+            renderer.domElement.addEventListener('mouseup', () => {
+                isMouseDown = false;
+            });
+            
+            renderer.domElement.addEventListener('wheel', (event) => {
+                camera.position.z += event.deltaY * 0.05;
+                camera.position.z = Math.max(10, Math.min(50, camera.position.z));
+            });
+            
+            // Update camera rotation in animation loop
+            window.updateCameraRotation = () => {
+                if (!autoRotate) {
+                    scene.rotation.y += (targetRotationY - scene.rotation.y) * 0.05;
+                    scene.rotation.x += (targetRotationX - scene.rotation.x) * 0.05;
+                }
+            };
+            
+            // Reset camera button
+            document.getElementById('reset-camera').addEventListener('click', () => {
+                camera.position.set(0, 0, 30);
+                scene.rotation.set(0, 0, 0);
+                targetRotationX = 0;
+                targetRotationY = 0;
+            });
+            
+            // Auto rotate button
+            document.getElementById('auto-rotate').addEventListener('click', () => {
+                autoRotate = !autoRotate;
+                document.getElementById('auto-rotate').style.background = autoRotate ? 'rgba(0, 255, 255, 0.3)' : 'rgba(10, 10, 26, 0.7)';
+            });
+        }
+        
+        // Handle window resize
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+        
+        // Handle mouse move
+        function onMouseMove(event) {
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+            
+            // Update raycaster
+            raycaster.setFromCamera(mouse, camera);
+            const intersects = raycaster.intersectObjects(objects);
+            
+            // Reset all objects
+            objects.forEach(obj => {
+                obj.material.emissiveIntensity = 0.2;
+                obj.scale.set(1, 1, 1);
+            });
+            
+            // Highlight hovered object
+            if (intersects.length > 0) {
+                selectedObject = intersects[0].object;
+                selectedObject.material.emissiveIntensity = 0.5;
+                selectedObject.scale.set(1.1, 1.1, 1.1);
+                document.body.style.cursor = 'pointer';
+            } else {
+                selectedObject = null;
+                document.body.style.cursor = 'default';
+            }
+        }
+        
+        // Handle mouse click
+        function onMouseClick(event) {
+            if (selectedObject) {
+                const section = selectedObject.userData.section;
+                showPanel(section);
+                updateActiveNav(section);
+            }
+        }
+        
+        // Show content panel
+        function showPanel(section) {
+            // Hide all panels
+            document.querySelectorAll('.content-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            
+            // Show selected panel
+            document.getElementById(`${section}-panel`).classList.add('active');
+        }
+        
+        // Update active navigation
+        function updateActiveNav(section) {
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-section') === section) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            // Rotate objects
+            objects.forEach((obj, index) => {
+                obj.rotation.x += 0.005 * (index + 1);
+                obj.rotation.y += 0.007 * (index + 1);
+            });
+            
+            // Auto rotate scene
+            if (autoRotate) {
+                scene.rotation.y += 0.002;
+            } else {
+                window.updateCameraRotation();
+            }
+            
+            renderer.render(scene, camera);
+        }
+        
+        // Navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const section = link.getAttribute('data-section');
+                showPanel(section);
+                updateActiveNav(section);
+            });
+        });
+        
+        // Close buttons
+        document.querySelectorAll('.close-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.content-panel').forEach(panel => {
+                    panel.classList.remove('active');
+                });
+            });
+        });
+        
+       const form = document.getElementById("contact-form");
+const resultDiv = form.querySelector(".form-result");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const data = new FormData(form);
+
+  fetch(form.action, {
+    method: "POST",
+    body: data
+  })
+    .then(res => res.json())
+    .then(response => {
+      if (response.success) {
+        resultDiv.textContent = "✅ Thanks! Your message has been sent.";
+        form.reset();
+      } else {
+        resultDiv.textContent = "❌ Oops! " + response.message;
+      }
+    })
+    .catch(err => {
+      resultDiv.textContent = "⚠ Error: " + err.message;
+    });
+});
+
+        
+        // Initialize the scene when the page loads
+        window.addEventListener('load', init);
+    </script>
+</body>
+</html>
