@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Rivera | 3D Portfolio</title>
+    <title>Haritha | 3D Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 <body>
     <!-- Loading Screen -->
@@ -49,21 +48,20 @@
         </div>
     </div>
 
-    <!-- Content Panels -->
     <!-- Home Panel -->
     <div class="content-panel" id="home-panel">
         <div class="close-btn"><i class="fas fa-times"></i></div>
         <h2 class="panel-title">Welcome to My 3D Portfolio</h2>
         <div class="panel-content">
-            <p>Hello! I'm Haritha, a passionate Cybersecurity Student and Developer with a drive to explore vulnlerabilities, build security focused tools, and innovate with technologies. This portfolio is designed as an interactive 3D space where you can explore my work and skills in a unique environment.</p>
+            <p>Hello! I'm Haritha, a passionate Cybersecurity Student and Developer with a drive to explore vulnerabilities, build security focused tools, and innovate with technologies. This portfolio is designed as an interactive 3D space where you can explore my work and skills in a unique environment.</p>
             <p>Navigate through the 3D space by clicking and dragging to rotate the view, scrolling to zoom in and out, and clicking on the floating objects to discover different sections of my portfolio.</p>
-            <p>Each object in this space represents a different aspect of my work - from my background and skills to my projects and how to get in touch with me.</p>
+            <p>Each object in this space represents a different aspect of my work — from my background and skills to my projects and how to get in touch with me.</p>
             <div class="skills">
                 <div class="skill">Cyber Security</div>
                 <div class="skill">Networking</div>
                 <div class="skill">Python</div>
                 <div class="skill">Frontend Development</div>
-                <div class="skill">Websecurity</div>
+                <div class="skill">Web Security</div>
                 <div class="skill">Automation</div>
             </div>
         </div>
@@ -96,54 +94,106 @@
         <h2 class="panel-title">My Projects</h2>
         <div class="panel-content">
             <div class="projects-grid">
+
                 <div class="project-card">
-                    <h3 class="project-title">Advanced Vulnerability Scanner</h3>
-                    <p class="project-desc">A powerful Python-based Web Vulnerability Scanner that helps to assess common web application security issues with business impact analysis and severity scoring.</p>
+                    <h3 class="project-title">Vulnerability Scanner</h3>
+                    <p class="project-desc">A Python-based web vulnerability scanner with threading, selective scanning, CVSS-like severity scoring, business impact analysis, CLI and REST API support, and CSV/HTML/JSON export.</p>
                     <div class="project-tags">
-                        <span class="tag">SQL Injection</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">Threading</span>
+                        <span class="tag">SQLi</span>
                         <span class="tag">XSS</span>
-                        <span class="tag">Weak Authentication</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Haritha-official/Advanced-Vulnerability-Scanner" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/Haritha-official/vulnerability-scanner" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <h3 class="project-title">StegoScope-Stegnography Tool</h3>
-                    <p class="project-desc">It allows you to embed secret messages into images and extract them later using a simple graphical interface.</p>
-                    <div class="project-tags">
-                        <span class="tag">Tkinter</span>
-                        <span class="tag">Pillow</span>
-                        <span class="tag">Stegno</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Haritha-official/HideNReveal---Stegnography-GUI" class="project-link"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3 class="project-title">Parallex Startup Design</h3>
-                    <p class="project-desc">A sleek, modern, and visually appealing landing page designed with smooth parallax effects to captivate your audience.</p>
-                    <div class="project-tags">
-                        <span class="tag">UI/UX</span>
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Haritha-official/Parallex-Startup-Design" class="project-link"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
+
                 <div class="project-card">
                     <h3 class="project-title">Port Scanner</h3>
-                    <p class="project-desc">This tool scans a target host for open ports, detects running services, attempts basic banner banner grabbing, and exports results to a CSV file for further analysis.</p>
+                    <p class="project-desc">A fast multi-threaded port scanner built in Python. Scans a target host for open ports, detects running services, attempts banner grabbing, and exports results to a CSV file with timestamps.</p>
                     <div class="project-tags">
+                        <span class="tag">Python</span>
                         <span class="tag">Multithreaded</span>
                         <span class="tag">Banner Grabbing</span>
-                        <span class="tag">Open Ports</span>
+                        <span class="tag">CSV Export</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Haritha-official/Port_Scanner" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/Haritha-official/Port_Scanner" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">StegoScope — Steganography Tool</h3>
+                    <p class="project-desc">A GUI-based image steganography tool built with Python and Tkinter. Hides and extracts secret messages inside images using the LSB (Least Significant Bit) technique with an intuitive graphical interface.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Tkinter</span>
+                        <span class="tag">Stegano</span>
+                        <span class="tag">LSB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Haritha-official/HideNReveal---Stegnography-GUI" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">IP Finder</h3>
+                    <p class="project-desc">A browser-based tool that instantly detects and displays your public IP address along with network details. Clean, minimal interface — runs entirely client-side with no installation required.</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Networking</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Haritha-official/ip-finder" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">ExpenseIQ</h3>
+                    <p class="project-desc">A browser-based expense tracker to plan money, track spending, and reach savings goals. Features income tracking, budgeted vs actual expense comparison, savings progress bar, and localStorage persistence.</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">localStorage</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Haritha-official/expense-tracker" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Hash Generator</h3>
+                    <p class="project-desc">A browser-based tool that generates a cryptographic hash from any text input. Clean, minimal interface with instant results — runs entirely client-side with no installation needed.</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Cryptography</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Haritha-official/hash-generator" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Startup Landing Page</h3>
+                    <p class="project-desc">A modern responsive landing page with parallax scrolling, scroll reveal animations, sticky navbar, counter animation, hamburger menu for mobile, and client-side form validation.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Parallax</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Haritha-official/startup-landing-page" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -154,35 +204,32 @@
         <h2 class="panel-title">Get In Touch</h2>
         <div class="panel-content">
             <p>I'm always interested in new opportunities and exciting projects. If you'd like to work together feel free to reach out!</p>
-            
+
             <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-    <input type="hidden" name="access_key" value="e459c806-73f5-4304-852a-71be1742aec0">
+                <input type="hidden" name="access_key" value="e459c806-73f5-4304-852a-71be1742aec0">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="form-result"></div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
 
-    <div class="form-group">
-        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-    </div>
-    <div class="form-group">
-        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" name="subject" placeholder="Subject">
-    </div>
-    <div class="form-group">
-        <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
-    </div>
-
-    <div class="form-result"></div>
-    <button type="submit" class="btn-submit">Send Message</button>
-</form>
-
-            
             <div style="margin-top: 30px;">
                 <h3 style="font-family: 'Orbitron', sans-serif; margin-bottom: 15px; color: var(--primary);">Connect With Me</h3>
                 <div style="display: flex; gap: 15px;">
-                    <a href="https://github.com/Haritha-official" style="width: 50px; height: 50px; background: rgba(0, 255, 255, 0.1); border: 1px solid var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 20px; transition: all 0.3s ease;">
+                    <a href="https://github.com/Haritha-official" target="_blank" style="width: 50px; height: 50px; background: rgba(0, 255, 255, 0.1); border: 1px solid var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 20px; transition: all 0.3s ease;">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/haritha-ganapathy-5a7720269/" style="width: 50px; height: 50px; background: rgba(0, 255, 255, 0.1); border: 1px solid var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 20px; transition: all 0.3s ease;">
+                    <a href="https://www.linkedin.com/in/haritha-ganapathy/" target="_blank" style="width: 50px; height: 50px; background: rgba(0, 255, 255, 0.1); border: 1px solid var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 20px; transition: all 0.3s ease;">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
@@ -191,69 +238,54 @@
     </div>
 
     <script>
-        // Global variables
         let scene, camera, renderer, controls;
         let objects = [];
         let raycaster, mouse;
         let autoRotate = false;
         let selectedObject = null;
-        
-        // Initialize Three.js scene
+
         function init() {
-            // Create scene
             scene = new THREE.Scene();
             scene.fog = new THREE.Fog(0x0A0A1A, 10, 50);
-            
-            // Create camera
+
             camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
             camera.position.z = 30;
-            
-            // Create renderer
+
             renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.setPixelRatio(window.devicePixelRatio);
             document.getElementById('canvas-container').appendChild(renderer.domElement);
-            
-            // Add lights
+
             const ambientLight = new THREE.AmbientLight(0x404040);
             scene.add(ambientLight);
-            
+
             const directionalLight = new THREE.DirectionalLight(0x00FFFF, 1);
             directionalLight.position.set(1, 1, 1);
             scene.add(directionalLight);
-            
+
             const directionalLight2 = new THREE.DirectionalLight(0xFF00FF, 0.5);
             directionalLight2.position.set(-1, -1, -1);
             scene.add(directionalLight2);
-            
-            // Add stars background
+
             createStarfield();
-            
-            // Create portfolio objects
             createPortfolioObjects();
-            
-            // Add raycaster for mouse interaction
+
             raycaster = new THREE.Raycaster();
             mouse = new THREE.Vector2();
-            
-            // Add event listeners
+
             window.addEventListener('resize', onWindowResize);
             renderer.domElement.addEventListener('mousemove', onMouseMove);
             renderer.domElement.addEventListener('click', onMouseClick);
-            
-            // Add controls
+
             addControls();
-            
-            // Hide loading screen
+
             setTimeout(() => {
                 document.getElementById('loading-screen').classList.add('hidden');
             }, 1000);
-            
-            // Start animation
+
             animate();
         }
-        
-        // Create starfield background
+
         function createStarfield() {
             const starsGeometry = new THREE.BufferGeometry();
             const starsMaterial = new THREE.PointsMaterial({
@@ -262,178 +294,127 @@
                 transparent: true,
                 opacity: 0.8
             });
-            
+
             const starsVertices = [];
             for (let i = 0; i < 10000; i++) {
-                const x = (Math.random() - 0.5) * 2000;
-                const y = (Math.random() - 0.5) * 2000;
-                const z = (Math.random() - 0.5) * 2000;
-                starsVertices.push(x, y, z);
+                starsVertices.push(
+                    (Math.random() - 0.5) * 2000,
+                    (Math.random() - 0.5) * 2000,
+                    (Math.random() - 0.5) * 2000
+                );
             }
-            
+
             starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starsVertices, 3));
-            const starField = new THREE.Points(starsGeometry, starsMaterial);
-            scene.add(starField);
+            scene.add(new THREE.Points(starsGeometry, starsMaterial));
         }
-        
-        // Create portfolio objects
+
         function createPortfolioObjects() {
-            // Home object - Large central sphere
             const homeGeometry = new THREE.SphereGeometry(3, 32, 32);
-            const homeMaterial = new THREE.MeshPhongMaterial({
-                color: 0x00FFFF,
-                emissive: 0x00FFFF,
-                emissiveIntensity: 0.2,
-                shininess: 100
-            });
+            const homeMaterial = new THREE.MeshPhongMaterial({ color: 0x00FFFF, emissive: 0x00FFFF, emissiveIntensity: 0.2, shininess: 100 });
             const homeObject = new THREE.Mesh(homeGeometry, homeMaterial);
             homeObject.position.set(0, 0, 0);
             homeObject.userData = { section: 'home', originalColor: 0x00FFFF };
             scene.add(homeObject);
             objects.push(homeObject);
-            
-            // About object - Torus
+
             const aboutGeometry = new THREE.TorusGeometry(2.5, 0.8, 16, 100);
-            const aboutMaterial = new THREE.MeshPhongMaterial({
-                color: 0xFF00FF,
-                emissive: 0xFF00FF,
-                emissiveIntensity: 0.2,
-                shininess: 100
-            });
+            const aboutMaterial = new THREE.MeshPhongMaterial({ color: 0xFF00FF, emissive: 0xFF00FF, emissiveIntensity: 0.2, shininess: 100 });
             const aboutObject = new THREE.Mesh(aboutGeometry, aboutMaterial);
             aboutObject.position.set(-10, 5, -5);
             aboutObject.userData = { section: 'about', originalColor: 0xFF00FF };
             scene.add(aboutObject);
             objects.push(aboutObject);
-            
-            // Projects object - Octahedron
+
             const projectsGeometry = new THREE.OctahedronGeometry(3, 0);
-            const projectsMaterial = new THREE.MeshPhongMaterial({
-                color: 0xFFFF00,
-                emissive: 0xFFFF00,
-                emissiveIntensity: 0.2,
-                shininess: 100
-            });
+            const projectsMaterial = new THREE.MeshPhongMaterial({ color: 0xFFFF00, emissive: 0xFFFF00, emissiveIntensity: 0.2, shininess: 100 });
             const projectsObject = new THREE.Mesh(projectsGeometry, projectsMaterial);
             projectsObject.position.set(10, -5, -5);
             projectsObject.userData = { section: 'projects', originalColor: 0xFFFF00 };
             scene.add(projectsObject);
             objects.push(projectsObject);
-            
-            // Contact object - Tetrahedron
+
             const contactGeometry = new THREE.TetrahedronGeometry(3, 0);
-            const contactMaterial = new THREE.MeshPhongMaterial({
-                color: 0x00FF00,
-                emissive: 0x00FF00,
-                emissiveIntensity: 0.2,
-                shininess: 100
-            });
+            const contactMaterial = new THREE.MeshPhongMaterial({ color: 0x00FF00, emissive: 0x00FF00, emissiveIntensity: 0.2, shininess: 100 });
             const contactObject = new THREE.Mesh(contactGeometry, contactMaterial);
             contactObject.position.set(0, -8, 5);
             contactObject.userData = { section: 'contact', originalColor: 0x00FF00 };
             scene.add(contactObject);
             objects.push(contactObject);
-            
-            // Add connecting lines between objects
-            const lineMaterial = new THREE.LineBasicMaterial({ 
-                color: 0x404040,
-                transparent: true,
-                opacity: 0.5
-            });
-            
+
+            const lineMaterial = new THREE.LineBasicMaterial({ color: 0x404040, transparent: true, opacity: 0.5 });
             for (let i = 0; i < objects.length; i++) {
                 for (let j = i + 1; j < objects.length; j++) {
-                    const points = [];
-                    points.push(objects[i].position);
-                    points.push(objects[j].position);
-                    
-                    const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
-                    const line = new THREE.Line(lineGeometry, lineMaterial);
-                    scene.add(line);
+                    const lineGeometry = new THREE.BufferGeometry().setFromPoints([objects[i].position, objects[j].position]);
+                    scene.add(new THREE.Line(lineGeometry, lineMaterial));
                 }
             }
         }
-        
-        // Add controls
+
         function addControls() {
-            // Simple orbit controls implementation
             let isMouseDown = false;
             let mouseX = 0, mouseY = 0;
             let targetRotationX = 0, targetRotationY = 0;
-            let targetRotationOnMouseDownX = 0, targetRotationOnMouseDownY = 0;
-            
+            let targetRotationOnMouseDownY = 0;
+
             renderer.domElement.addEventListener('mousedown', (event) => {
                 isMouseDown = true;
                 mouseX = event.clientX;
                 mouseY = event.clientY;
-                targetRotationOnMouseDownX = targetRotationX;
                 targetRotationOnMouseDownY = targetRotationY;
             });
-            
+
             renderer.domElement.addEventListener('mousemove', (event) => {
                 if (isMouseDown) {
-                    mouseX = event.clientX;
-                    mouseY = event.clientY;
-                    targetRotationY = targetRotationOnMouseDownY + (mouseX - window.innerWidth / 2) * 0.01;
-                    targetRotationX = targetRotationOnMouseDownY + (mouseY - window.innerHeight / 2) * 0.01;
+                    targetRotationY = targetRotationOnMouseDownY + (event.clientX - window.innerWidth / 2) * 0.01;
+                    targetRotationX = targetRotationOnMouseDownY + (event.clientY - window.innerHeight / 2) * 0.01;
                 }
             });
-            
-            renderer.domElement.addEventListener('mouseup', () => {
-                isMouseDown = false;
-            });
-            
+
+            renderer.domElement.addEventListener('mouseup', () => { isMouseDown = false; });
+
             renderer.domElement.addEventListener('wheel', (event) => {
                 camera.position.z += event.deltaY * 0.05;
                 camera.position.z = Math.max(10, Math.min(50, camera.position.z));
             });
-            
-            // Update camera rotation in animation loop
+
             window.updateCameraRotation = () => {
                 if (!autoRotate) {
                     scene.rotation.y += (targetRotationY - scene.rotation.y) * 0.05;
                     scene.rotation.x += (targetRotationX - scene.rotation.x) * 0.05;
                 }
             };
-            
-            // Reset camera button
+
             document.getElementById('reset-camera').addEventListener('click', () => {
                 camera.position.set(0, 0, 30);
                 scene.rotation.set(0, 0, 0);
                 targetRotationX = 0;
                 targetRotationY = 0;
             });
-            
-            // Auto rotate button
+
             document.getElementById('auto-rotate').addEventListener('click', () => {
                 autoRotate = !autoRotate;
                 document.getElementById('auto-rotate').style.background = autoRotate ? 'rgba(0, 255, 255, 0.3)' : 'rgba(10, 10, 26, 0.7)';
             });
         }
-        
-        // Handle window resize
+
         function onWindowResize() {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
         }
-        
-        // Handle mouse move
+
         function onMouseMove(event) {
             mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
             mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-            
-            // Update raycaster
+
             raycaster.setFromCamera(mouse, camera);
             const intersects = raycaster.intersectObjects(objects);
-            
-            // Reset all objects
+
             objects.forEach(obj => {
                 obj.material.emissiveIntensity = 0.2;
                 obj.scale.set(1, 1, 1);
             });
-            
-            // Highlight hovered object
+
             if (intersects.length > 0) {
                 selectedObject = intersects[0].object;
                 selectedObject.material.emissiveIntensity = 0.5;
@@ -444,58 +425,40 @@
                 document.body.style.cursor = 'default';
             }
         }
-        
-        // Handle mouse click
-        function onMouseClick(event) {
+
+        function onMouseClick() {
             if (selectedObject) {
-                const section = selectedObject.userData.section;
-                showPanel(section);
-                updateActiveNav(section);
+                showPanel(selectedObject.userData.section);
+                updateActiveNav(selectedObject.userData.section);
             }
         }
-        
-        // Show content panel
+
         function showPanel(section) {
-            // Hide all panels
-            document.querySelectorAll('.content-panel').forEach(panel => {
-                panel.classList.remove('active');
-            });
-            
-            // Show selected panel
+            document.querySelectorAll('.content-panel').forEach(p => p.classList.remove('active'));
             document.getElementById(`${section}-panel`).classList.add('active');
         }
-        
-        // Update active navigation
+
         function updateActiveNav(section) {
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('data-section') === section) {
-                    link.classList.add('active');
-                }
+                if (link.getAttribute('data-section') === section) link.classList.add('active');
             });
         }
-        
-        // Animation loop
+
         function animate() {
             requestAnimationFrame(animate);
-            
-            // Rotate objects
             objects.forEach((obj, index) => {
                 obj.rotation.x += 0.005 * (index + 1);
                 obj.rotation.y += 0.007 * (index + 1);
             });
-            
-            // Auto rotate scene
             if (autoRotate) {
                 scene.rotation.y += 0.002;
             } else {
                 window.updateCameraRotation();
             }
-            
             renderer.render(scene, camera);
         }
-        
-        // Navigation links
+
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -504,43 +467,34 @@
                 updateActiveNav(section);
             });
         });
-        
-        // Close buttons
+
         document.querySelectorAll('.close-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.content-panel').forEach(panel => {
-                    panel.classList.remove('active');
-                });
+                document.querySelectorAll('.content-panel').forEach(p => p.classList.remove('active'));
             });
         });
-        
-       const form = document.getElementById("contact-form");
-const resultDiv = form.querySelector(".form-result");
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  const data = new FormData(form);
+        const contactForm = document.getElementById("contact-form");
+        const resultDiv = contactForm.querySelector(".form-result");
 
-  fetch(form.action, {
-    method: "POST",
-    body: data
-  })
-    .then(res => res.json())
-    .then(response => {
-      if (response.success) {
-        resultDiv.textContent = "✅ Thanks! Your message has been sent.";
-        form.reset();
-      } else {
-        resultDiv.textContent = "❌ Oops! " + response.message;
-      }
-    })
-    .catch(err => {
-      resultDiv.textContent = "⚠ Error: " + err.message;
-    });
-});
+        contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const data = new FormData(contactForm);
+            fetch(contactForm.action, { method: "POST", body: data })
+                .then(res => res.json())
+                .then(response => {
+                    if (response.success) {
+                        resultDiv.textContent = "✅ Thanks! Your message has been sent.";
+                        contactForm.reset();
+                    } else {
+                        resultDiv.textContent = "❌ Oops! " + response.message;
+                    }
+                })
+                .catch(err => {
+                    resultDiv.textContent = "⚠ Error: " + err.message;
+                });
+        });
 
-        
-        // Initialize the scene when the page loads
         window.addEventListener('load', init);
     </script>
 </body>
